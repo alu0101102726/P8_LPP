@@ -10,4 +10,8 @@ class Alimento
 	def to_s
 		"#{@nombre} , #{@proteinas} , #{@carbohidratos} , #{@lipidos} , #{@gei} , #{@terreno}"
 	end
+
+	def v_energ
+                return ((@proteinas * 4) + (@carbohidratos * 4) + (@lipidos * 9))
+        end
 end
