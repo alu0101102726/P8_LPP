@@ -8,7 +8,11 @@ RSpec.describe P6 do
  describe Alimento do
 	before (:all) do
 		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+		@camarones = Alimento.new("Camarones", 17.6, 1.5, 0.6, 18.0, 2.0)
+		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
 		
+
 	end
 
 	context "Probando los getters" do
@@ -37,5 +41,14 @@ RSpec.describe P6 do
 			expect(@tofu.v_energ).to eq(82.8)
 		end
 	end
-  end
+
+	context "Probando cálculo impacto ambiental" do
+		it "Cálculo correcto impacto ambiental de un hombre" do
+			arry_gei = [@tofu.gei ,  @camarones.gei ,  @pollo.gei ]
+			arry_terreno = [@tofu.terreno , @camarones.terreno  , @pollo.terreno ]
+			arry_cantidad = [8 , 10 , 12]
+			expect(@tofu.imp_amb(arry_gei, arry_terreno , arry_cantidad)).to eq(387.2)
+		end
+	end
+end
 end
