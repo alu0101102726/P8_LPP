@@ -49,6 +49,15 @@ RSpec.describe P6 do
 			arry_cantidad = [8 , 10 , 12]
 			expect(@tofu.imp_amb(arry_gei, arry_terreno , arry_cantidad)).to eq(387.2)
 		end
+
+		it "Cálculo correcto impacto ambiental de una mujer" do
+			arry_gei = [@tofu.gei ,  @queso.gei ,  @pollo.gei ]
+			arry_terreno = [@tofu.terreno , @queso.terreno  , @pollo.terreno ]
+			arry_cantidad = [8 , 6 , 10]
+			expect(@tofu.imp_amb(arry_gei, arry_terreno , arry_cantidad)).to eq(473.6)
+		end
+
+		
 	end
 end
 end
