@@ -16,9 +16,10 @@ RSpec.describe P6 do
 			expect(@tofu.nombre).to eq("Tofu")
 		end
 
-		it "Probando si los getters de proteinas, carbohidratos" do
+		it "Probando si los getters de proteinas, carbohidratos y lípidos" do
 			expect(@tofu.proteinas).to eq(8.0)
 			expect(@tofu.carbohidratos).to eq(1.9)
+			expect(@tofu.lipidos).to eq(4.8)
 		end
 	end
   end
