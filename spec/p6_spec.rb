@@ -15,6 +15,10 @@ RSpec.describe P6 do
 		it "El getter del nombre funciona bien" do
 			expect(@tofu.nombre).to eq("Tofu")
 		end
+
+		it "Probando si los getters de proteinas" do
+			expect(@tofu.proteinas).to eq(8.0)
+		end
 	end
   end
 end
