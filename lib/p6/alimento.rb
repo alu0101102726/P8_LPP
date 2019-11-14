@@ -6,4 +6,8 @@ class Alimento
 		@proteinas , @carbohidratos , @lipidos = prot , carbohid , lip
 		@gei , @terreno = ge , ter
 	end	
+
+	def to_s
+		"#{@nombre} , #{@proteinas} , #{@carbohidratos} , #{@lipidos} , #{@gei} , #{@terreno}"
+	end
 end
