@@ -27,5 +27,11 @@ RSpec.describe P6 do
 			expect(@tofu.terreno).to eq(2.2)
 		end
 	end
+
+	context "Probando obtencion del alimento formateado" do
+		it "El alimento formateado es correcto" do
+			expect(@tofu.to_s).to eq("Tofu , 8.0 , 1.9 , 4.8 , 2.0 , 2.2" )
+		end
+	end
   end
 end
