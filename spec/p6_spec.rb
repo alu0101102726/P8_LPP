@@ -22,8 +22,9 @@ RSpec.describe P6 do
 			expect(@tofu.lipidos).to eq(4.8)
 		end
 
-		it "Probando si los getters de GEI" do
+		it "Probando si los getters de GEI y terreno" do
 			expect(@tofu.gei).to eq(2.0)
+			expect(@tofu.terreno).to eq(2.2)
 		end
 	end
   end
