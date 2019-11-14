@@ -7,7 +7,8 @@ RSpec.describe P6 do
 
  describe Alimento do
 	before (:all) do
-		@carne_vaca = Alimento.new("Carne Vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+		
 	end
   end
 end
