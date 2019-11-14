@@ -1,4 +1,5 @@
 class Alimento
+	attr_reader :nombre
 
 	def initialize(nom , prot , carbohid , lip , ge , ter)
 		@nombre = nom
