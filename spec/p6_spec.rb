@@ -10,5 +10,11 @@ RSpec.describe P6 do
 		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
 		
 	end
+
+	context "Probando los getters" do
+		it "El getter del nombre funciona bien" do
+			expect(@tofu.nombre).to eq("Tofu")
+		end
+	end
   end
 end
