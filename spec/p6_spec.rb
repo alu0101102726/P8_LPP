@@ -21,6 +21,10 @@ RSpec.describe P6 do
 			expect(@tofu.carbohidratos).to eq(1.9)
 			expect(@tofu.lipidos).to eq(4.8)
 		end
+
+		it "Probando si los getters de GEI" do
+			expect(@tofu.gei).to eq(2.0)
+		end
 	end
   end
 end
