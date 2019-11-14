@@ -28,9 +28,13 @@ RSpec.describe P6 do
 		end
 	end
 
-	context "Probando obtencion del alimento formateado" do
+	context "Probando obtencion del alimento formateado y valor eergético" do
 		it "El alimento formateado es correcto" do
 			expect(@tofu.to_s).to eq("Tofu , 8.0 , 1.9 , 4.8 , 2.0 , 2.2" )
+		end
+
+		it "El valor energético es el correcto" do
+			expect(@tofu.v_energ).to eq(82.8)
 		end
 	end
   end
