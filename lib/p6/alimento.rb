@@ -1,5 +1,5 @@
 class Alimento
-	attr_reader :nombre , :proteinas , :carbohidratos , :lipidos , :gei
+	attr_reader :nombre , :proteinas , :carbohidratos , :lipidos , :gei , :terreno
 
 	def initialize(nom , prot , carbohid , lip , ge , ter)
 		@nombre = nom
