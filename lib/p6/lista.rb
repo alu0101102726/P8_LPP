@@ -47,4 +47,16 @@ class Lista
 		end
 		return @@number_elements_list
 	end
+
+	def insert_all_elements_tail (array)
+		@@number_elements_list = 0
+		i = 0
+		while (i < array.length) 
+			insert_element_tail(array[i])
+			i += 1
+			@@number_elements_list += 1
+		end
+		return @@number_elements_list
+	end
+
 end
