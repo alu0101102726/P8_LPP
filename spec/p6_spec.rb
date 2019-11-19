@@ -70,6 +70,11 @@ RSpec.describe P6 do
 		it "Getter de la cabeza funciona correctamente" do
 			expect(@list.head).to eq(nil)
 		end
+
+		it "Getter de la cola funciona correctamente" do
+			expect(@list.tail).to eq(nil)
+		end
+
 	end
  end
 end
