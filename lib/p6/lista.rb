@@ -1,7 +1,7 @@
 Nodo = Struct.new(:value , :head , :tail)
 
 class Lista
-	attr_reader :head
+	attr_reader :head, :tail
 	def initialize(head, tail)
 		@head = head
 		@tail = tail
