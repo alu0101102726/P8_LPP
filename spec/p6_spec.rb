@@ -11,7 +11,8 @@ RSpec.describe P6 do
 		@camarones = Alimento.new("Camarones", 17.6, 1.5, 0.6, 18.0, 2.0)
 		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
-		
+		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
+		@chocolate = Alimento.new("Choccolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
 
 	end
 
@@ -65,6 +66,8 @@ RSpec.describe P6 do
 	before(:all) do
 		@list = Lista.new(nil,nil)
 		@list2 = Lista.new(nil,nil)
+		@espanola = Lista.new(nil,nil)
+		@vasca = Lista.new(nil,nil)
 	end
 
 	context "Probando getters" do
@@ -104,6 +107,16 @@ RSpec.describe P6 do
 
 		it "Eliminar un elemento por la cola" do
 			expect(@list2.erase_element_tail).to eq(7)
+		end
+	end
+
+	context "Probando las comidas" do
+		it "Dieta española creada correctamente" do
+			expect(@espanola.insert_all_elements_head([[@lentejas,7],[@chocolate,4.05],[@queso,6.3]])).to eq(3)
+		end
+
+		it "Dieta vasca creada correctamente" do
+			expect(@vasca.insert_all_elements_tail([[@nuez,13],[@cerveza,35]])).to eq(2)
 		end
 	end
  end
