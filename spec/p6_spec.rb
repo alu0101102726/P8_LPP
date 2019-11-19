@@ -62,6 +62,14 @@ RSpec.describe P6 do
  end
 
  describe Lista do
-		@list = Lista.new(head,tail)
+	before(:all) do
+		@list = Lista.new(nil,nil)
+	end
+
+	context "Probando getters" do
+		it "Getter de la cabeza funciona correctamente" do
+			expect(@list.head).to eq(nil)
+		end
+	end
  end
 end
