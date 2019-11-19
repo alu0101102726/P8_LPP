@@ -20,4 +20,18 @@ class Lista
 
 		return [node[:value], node[:next] , node[:prev]]
 	end
+
+	def insert_element_tail( valor )
+		if(@head == nil && @tail == nil) then
+			node = Nodo.new(valor,nil,nil)
+			@head = node
+			@tail = node
+		else
+			node = Nodo.new(valor,nil,@tail)
+			@tail = node
+			@tail[:next] = node
+		end
+
+		return node[:value]
+	end
 end

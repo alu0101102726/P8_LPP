@@ -64,6 +64,7 @@ RSpec.describe P6 do
  describe Lista do
 	before(:all) do
 		@list = Lista.new(nil,nil)
+		@list2 = Lista.new(nil,nil)
 	end
 
 	context "Probando getters" do
@@ -80,6 +81,14 @@ RSpec.describe P6 do
 	context "Probando inserción" do
 		it "Insertar un elemento por la cabeza en la lista correcto" do
 			expect(@list.insert_element_head(5)).to eq([5,nil,nil])
+		end
+
+		it "Insertar un elemento por la cola en la lista correcto" do
+			expect(@list.insert_element_tail(7)).to eq(7)
+		end
+
+		it "Insertar varios elementos por la cabeza correcto" do
+			expect(@list2.insert_all_elements_head([5,6,7])).to eq(3)
 		end
 	end
  end
