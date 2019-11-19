@@ -2,6 +2,8 @@ Nodo = Struct.new(:value , :next , :prev)
 
 class Lista
 	attr_reader :head, :tail
+
+	@@number_elements_list = 0
 	def initialize(head, tail)
 		@head = head
 		@tail = tail
@@ -33,5 +35,16 @@ class Lista
 		end
 
 		return node[:value]
+	end
+
+	def insert_all_elements_head (array)
+		@@number_elements_list = 0
+		i = 0
+		while (i < array.length) 
+			insert_element_head(array[i])
+			i += 1
+			@@number_elements_list += 1
+		end
+		return @@number_elements_list
 	end
 end
