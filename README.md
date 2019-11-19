@@ -1,10 +1,10 @@
-# Practica 6: Desarrollo Dirigido por Pruebas (TDD) 
+# Practica 7: Listas Doblemente Enlazadas usando TDD 
 
 ## Autor: Carlos Díaz Calzadilla | <alu0101102726@ull.edu.es>
 
 ## Objetivo de la practica  
 
- - Desarrollar una clase mediante la metodologia de desarrollo dirigido por pruebas.
+ - Desarrollar una clase Lista mediante la metodologia de desarrollo dirigido por pruebas.
  - Escribir la prueba del metodo.
  - Verificar que la prueba falla.
  - Escribir la implementacion del metodo.
@@ -36,6 +36,7 @@ p6
 
 ## Commits
 ``` bash
+ - - - - - - - PRÁCTICA 6 - - - - - - - 
 * 412a5e7 (HEAD -> master, ghp06/master, desarrollo) Duodécima prueba: Creando impacto ambiental mujer | CORRECTO
 * 4b4e044 Undécima prueba y código: Creando impacto ambiental hombre | CORRECTO
 * c1c0a21 Décima edición código: Creando el obetener valor energético | CORRECTO
