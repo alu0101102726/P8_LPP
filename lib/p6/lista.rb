@@ -73,4 +73,18 @@ class Lista
 		end
 	end
 
+	def erase_element_tail
+		if(@head != nil && @tail != nil) then
+			if (@head == @tail) then
+				@head = nil
+				@tail = nil
+			else
+				@tail = @tail[:prev]
+				@tail[:next] = nil
+			end
+
+			return @tail[:value]
+		end
+	end
+
 end
