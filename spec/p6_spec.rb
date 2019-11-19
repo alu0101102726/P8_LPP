@@ -101,6 +101,10 @@ RSpec.describe P6 do
 		it "Eliminar un elemento por la cabeza" do
 			expect(@list2.erase_element_head).to eq(6)
 		end
+
+		it "Eliminar un elemento por la cola" do
+			expect(@list2.erase_element_tail).to eq(7)
+		end
 	end
  end
 end
