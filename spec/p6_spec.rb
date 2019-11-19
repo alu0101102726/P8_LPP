@@ -99,7 +99,7 @@ RSpec.describe P6 do
 
 	context "Probando extracción" do
 		it "Eliminar un elemento por la cabeza" do
-			expect(@list.erase_element_head).to eq(1)
+			expect(@list2.erase_element_head).to eq(6)
 		end
 	end
  end

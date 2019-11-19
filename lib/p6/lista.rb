@@ -59,4 +59,18 @@ class Lista
 		return @@number_elements_list
 	end
 
+	def erase_element_head 
+		if(@head != nil && @tail != nil) then
+			if (@head == @tail) then
+				@head = nil
+				@tail = nil
+			else
+				@head = @head[:next]
+				@head[:prev] = nil
+			end
+
+			return @head[:value]
+		end
+	end
+
 end
