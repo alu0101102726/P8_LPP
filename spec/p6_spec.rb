@@ -91,10 +91,16 @@ RSpec.describe P6 do
 			expect(@list2.insert_all_elements_head([5,6,7])).to eq(3)
 		end
 
-		it "Insertar varios elementos por la cabeza correcto" do
+		it "Insertar varios elementos por la cola correcto" do
 			expect(@list2.insert_all_elements_tail([5,6,7,8])).to eq(4)
 		end
 
+	end
+
+	context "Probando extracción" do
+		it "Eliminar un elemento por la cabeza" do
+			expect(@list.erase_element_head).to eq(1)
+		end
 	end
  end
 end
