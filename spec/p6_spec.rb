@@ -78,8 +78,8 @@ RSpec.describe P6 do
 	end
 
 	context "Probando inserción" do
-		it "Insertar un elemento en la lista correcto" do
-			expect(@list.insert_element(5)).to eq(5)
+		it "Insertar un elemento por la cabeza en la lista correcto" do
+			expect(@list.insert_element_head(5)).to eq([5,nil,nil])
 		end
 	end
  end
