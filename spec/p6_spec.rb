@@ -59,5 +59,9 @@ RSpec.describe P6 do
 
 		
 	end
-end
+ end
+
+ describe Lista do
+		@list = Lista.new(head,tail)
+ end
 end
