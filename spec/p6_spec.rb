@@ -68,8 +68,11 @@ RSpec.describe P6 do
 		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
 		@leche = Alimento.new("Leche" , 3.3 , 4.8 , 3.2 , 3.2 , 8.9)
+		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 		@huevos = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
 		@nuez = Alimento.new("Nuez" , 20.0 , 21.0 , 54.0 , 0.3 , 7.9)
+		@carne_vaca = Alimento.new("Carne de vaca" , 21.1 , 0.0 , 3.1 , 50.0 , 164.0)
+		@carne_cordero = Alimento.new("Carne de cordero" , 18.0 , 0.0 , 17.0 , 20.0 , 185.0)
 
 		@list = Lista.new(nil,nil)
 		@list2 = Lista.new(nil,nil)
@@ -78,6 +81,7 @@ RSpec.describe P6 do
 		@vasca = Lista.new(nil,nil)
 		@vegetaria = Lista.new(nil,nil)
 		@vegetaliana = Lista.new(nil,nil)
+		@solocarne = Lista.new(nil,nil)
 	end
 
 	context "Probando getters" do
@@ -129,6 +133,10 @@ RSpec.describe P6 do
 		it "Dieta vegetaria y vegetaliana creada correctamente" do
 			expect(@vegetaria.insert_all_elements_head([[@leche,10],[@huevo, 9],[@tofu, 6]])).to eq(3)
 			expect(@vegetaliana.insert_all_elements_tail([[@lentejas,6],[@tofu,9],[@nuez,7]])).to eq(3)
+		end
+
+		it "Dieta solo carne creada correctamente" do
+			expect(@solocarne.insert_all_elements_head([[@carne_cordero,5],[@carne_vaca,4],[@pollo,5]])).to eq(3)
 		end
 	end
  end
