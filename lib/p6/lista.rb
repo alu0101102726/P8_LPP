@@ -96,4 +96,14 @@ class Lista
 		end
 		return (n_dias * suma).round(1)
 	end
+
+	def expc_m2t
+		aux = @head
+		suma = 0
+		while aux != @tail[:next]
+			suma += (aux[:value][0].terreno * aux[:value][1])
+			aux = aux[:next]
+		end
+		return suma.round(1)
+	end
 end
