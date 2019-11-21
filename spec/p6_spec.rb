@@ -150,6 +150,15 @@ RSpec.describe P6 do
 			expect(@vegetaliana.expc_gei(1)).to eq(22.5)
 			expect(@solocarne.expc_gei(1)).to eq(328.5)
 		end
+		
+		it "Expectativas para estimar las emisiones anuales de GEI" do
+			expect(@espanola.expc_gei(365)).to eq(29716.5)
+			expect(@vasca.expc_gei(365)).to eq(4489.5)
+			expect(@vegetaria.expc_gei(365)).to eq(29857.0)
+			expect(@vegetaliana.expc_gei(365)).to eq(8212.5)
+			expect(@solocarne.expc_gei(365)).to eq(119902.5)
+		end
+
 	end
  end
 end
