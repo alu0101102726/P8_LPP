@@ -159,6 +159,14 @@ RSpec.describe P6 do
 			expect(@solocarne.expc_gei(365)).to eq(119902.5)
 		end
 
+		it "Expectativas para estimar las emisiones diarias de metros cuadrados de uso de terreno" do
+			expect(@espanola.expc_m2t).to eq(81.4)
+			expect(@vasca.expc_m2t).to eq(12.3)
+			expect(@vegetaria.expc_m2t).to eq(81.8)
+			expect(@vegetaliana.expc_m2t).to eq(22.5)
+			expect(@solocarne.expc_m2t).to eq(328.5)
+		end
+
 	end
  end
 end
