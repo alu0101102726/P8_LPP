@@ -139,5 +139,11 @@ RSpec.describe P6 do
 			expect(@solocarne.insert_all_elements_head([[@carne_cordero,5],[@carne_vaca,4],[@pollo,5]])).to eq(3)
 		end
 	end
+
+	context "Expectativas para las dietas" do
+		it "Expectativas para estimar las emisiones diarias de GEI" do
+			expect(@espanola.expc_gei(1)).to eq(81.4)
+		end
+	end
  end
 end
