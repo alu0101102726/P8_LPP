@@ -64,15 +64,17 @@ RSpec.describe P6 do
 
  describe Lista do
 	before(:all) do
+		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
 		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
 		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
 		@leche = Alimento.new("Leche" , 3.3 , 4.8 , 3.2 , 3.2 , 8.9)
 		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
-		@huevos = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
+		@huevo = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
 		@nuez = Alimento.new("Nuez" , 20.0 , 21.0 , 54.0 , 0.3 , 7.9)
 		@carne_vaca = Alimento.new("Carne de vaca" , 21.1 , 0.0 , 3.1 , 50.0 , 164.0)
 		@carne_cordero = Alimento.new("Carne de cordero" , 18.0 , 0.0 , 17.0 , 20.0 , 185.0)
+		@cerveza = Alimento.new("Cerveza" , 0.5 , 3.6 , 0.0 , 0.24 , 0.22)
 
 		@list = Lista.new(nil,nil)
 		@list2 = Lista.new(nil,nil)
@@ -109,7 +111,7 @@ RSpec.describe P6 do
 		end
 
 		it "Insertar varios elementos por la cola correcto" do
-			expect(@list2.insert_all_elements_tail([5,6,7,8])).to eq(4)
+			expect(@list2.insert_all_elements_tail([5,6])).to eq(2)
 		end
 
 	end
@@ -120,7 +122,7 @@ RSpec.describe P6 do
 		end
 
 		it "Eliminar un elemento por la cola" do
-			expect(@list2.erase_element_tail).to eq(7)
+			expect(@list2.erase_element_tail).to eq(5)
 		end
 	end
 
@@ -143,6 +145,10 @@ RSpec.describe P6 do
 	context "Expectativas para las dietas" do
 		it "Expectativas para estimar las emisiones diarias de GEI" do
 			expect(@espanola.expc_gei(1)).to eq(81.4)
+			expect(@vasca.expc_gei(1)).to eq(12.3)
+			expect(@vegetaria.expc_gei(1)).to eq(81.8)
+			expect(@vegetaliana.expc_gei(1)).to eq(22.5)
+			expect(@solocarne.expc_gei(1)).to eq(328.5)
 		end
 	end
  end

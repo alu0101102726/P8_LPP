@@ -30,8 +30,8 @@ class Lista
 			@tail = node
 		else
 			node = Nodo.new(valor,nil,@tail)
-			@tail = node
 			@tail[:next] = node
+			@tail = node
 		end
 
 		return node[:value]
