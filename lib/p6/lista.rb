@@ -86,5 +86,14 @@ class Lista
 			return @tail[:value]
 		end
 	end
-
+	
+	def expc_gei(n_dias)
+		aux = @head
+		suma = 0
+		while aux != @tail[:next]
+			suma += (aux[:value][0].gei * aux[:value][1])
+			aux = aux[:next]
+		end
+		return (n_dias * suma).round(1)
+	end
 end
