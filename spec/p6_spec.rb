@@ -64,10 +64,20 @@ RSpec.describe P6 do
 
  describe Lista do
 	before(:all) do
+		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
+		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
+		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
+		@leche = Alimento.new("Leche" , 3.3 , 4.8 , 3.2 , 3.2 , 8.9)
+		@huevos = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
+		@nuez = Alimento.new("Nuez" , 20.0 , 21.0 , 54.0 , 0.3 , 7.9)
+
 		@list = Lista.new(nil,nil)
 		@list2 = Lista.new(nil,nil)
+
 		@espanola = Lista.new(nil,nil)
 		@vasca = Lista.new(nil,nil)
+		@vegetaria = Lista.new(nil,nil)
+		@vegetaliana = Lista.new(nil,nil)
 	end
 
 	context "Probando getters" do
@@ -110,13 +120,15 @@ RSpec.describe P6 do
 		end
 	end
 
-	context "Probando las comidas" do
-		it "Dieta española creada correctamente" do
+	context "Probando las dietas" do
+		it "Dieta española y vasca creada correctamente" do
 			expect(@espanola.insert_all_elements_head([[@lentejas,7],[@chocolate,4.05],[@queso,6.3]])).to eq(3)
+			expect(@vasca.insert_all_elements_tail([[@nuez,13],[@cerveza,35]])).to eq(2)
 		end
 
-		it "Dieta vasca creada correctamente" do
-			expect(@vasca.insert_all_elements_tail([[@nuez,13],[@cerveza,35]])).to eq(2)
+		it "Dieta vegetaria y vegetaliana creada correctamente" do
+			expect(@vegetaria.insert_all_elements_head([[@leche,10],[@huevo, 9],[@tofu, 6]])).to eq(3)
+			expect(@vegetaliana.insert_all_elements_tail([[@lentejas,6],[@tofu,9],[@nuez,7]])).to eq(3)
 		end
 	end
  end
