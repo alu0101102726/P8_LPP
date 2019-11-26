@@ -203,5 +203,7 @@ RSpec.describe P6 do
 end
 
 RSpec.describe Plato do
-
+	it "Obteniendo el objeto de un plato" do
+		expect(@plato).to respond_to(:nombre)
+	end
 end
