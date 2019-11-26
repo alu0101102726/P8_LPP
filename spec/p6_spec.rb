@@ -200,14 +200,23 @@ RSpec.describe P6 do
 
 	end
  end
-end
 
-RSpec.describe Plato do
+ describe Plato do
 	before(:all) do
 		@plato = Plato.new("Plato")
+		@conjunto_alimentos = Lista.new(nil,nil)
+		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
+
 	end
 
-	it "Obteniendo el objeto de un plato" do
+	it "Obteniendo el nombre de un plato" do
 		expect(@plato).to respond_to(:nombre)
 	end
+
+	it "Existe un conjunto de alimentos" do
+		expect(@conjunto_alimentos).to respond_to(:conjunto_alimentos)
+	end
+ end
+
 end
