@@ -57,8 +57,16 @@ RSpec.describe P6 do
 			arry_cantidad = [8 , 6 , 10]
 			expect(@tofu.imp_amb(arry_gei, arry_terreno , arry_cantidad)).to eq(473.6)
 		end
+	end
 
-		
+	context "Probando módulos añadidos" do
+		it "Probando <=> (Comparable), funciona correctamente" do
+			expect(@tofu < @lentejas).to eq(true)
+			expect(@tofu >= @queso).to eq(false)
+			expect(@tofu == @tofu).to eq(true)
+			expect(@pollo.between?(@tofu,@lentejas)).to eq(true)
+			expect(@lentejas.clamp(@camarones,@tofu)).to eq(@tofu)
+		end
 	end
  end
 
