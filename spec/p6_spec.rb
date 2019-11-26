@@ -201,3 +201,7 @@ RSpec.describe P6 do
 	end
  end
 end
+
+RSpec.describe Plato do
+
+end
