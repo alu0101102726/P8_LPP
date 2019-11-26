@@ -137,7 +137,7 @@ RSpec.describe P6 do
 	context "Probando las dietas" do
 		it "Dieta española y vasca creada correctamente" do
 			expect(@espanola.insert_all_elements_head([[@lentejas,7],[@chocolate,4.05],[@queso,6.3]])).to eq(3)
-			expect(@vasca.insert_all_elements_tail([[@nuez,13],[@cerveza,35]])).to eq(2)
+			expect(@vasca.insert_all_elements_head([[@nuez,13],[@cerveza,35]])).to eq(2)
 		end
 
 		it "Dieta vegetaria y vegetaliana creada correctamente" do
@@ -173,6 +173,29 @@ RSpec.describe P6 do
 			expect(@vegetaria.expc_m2t).to eq(153.5)
 			expect(@vegetaliana.expc_m2t).to eq(95.5)
 			expect(@solocarne.expc_m2t).to eq(1616.5)
+		end
+
+	end
+
+	context "Prueba modulos añadidos" do
+		it "Probando collect(Enumerable), funciona correctamente" do
+			expect(@vasca.collect{|x| x[0].lipidos >80}).to eq([false,false])
+		end
+
+		it "Probando select(Enumerable), funciona correctamente" do
+			expect(@vasca.select{|x| x[0].lipidos >80}).to eq([])
+		end
+
+		it "Probando max(Enumerable), funciona correctamente" do
+			expect(@vasca.max).to eq([@nuez,13])
+		end
+
+		it "Probando min(Enumerable), funciona correctamente" do
+			expect(@vasca.min).to eq([@cerveza,35])
+		end
+
+		it "Probando sort(Enumerable), funciona correctamente" do
+			expect(@vasca.sort{|a,b| a.length <=> b.length}).to eq([[@cerveza , 35],[@nuez,13]])
 		end
 
 	end

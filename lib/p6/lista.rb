@@ -1,12 +1,23 @@
 Nodo = Struct.new(:value , :next , :prev)
 
 class Lista
-	attr_reader :head, :tail
 
+	include Enumerable
+
+	attr_reader :head, :tail
+	
 	@@number_elements_list = 0
 	def initialize(head, tail)
 		@head = head
 		@tail = tail
+	end
+
+	def each
+		i = self.head
+		while( i != nil) 
+			yield i.value
+			i = i.next
+		end
 	end
 
 	def insert_element_head( valor )
