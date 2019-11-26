@@ -1,4 +1,5 @@
 class Alimento
+	include Comparable
 	attr_reader :nombre , :proteinas , :carbohidratos , :lipidos , :gei , :terreno
 
 	def initialize(nom , prot , carbohid , lip , ge , ter)
@@ -9,6 +10,10 @@ class Alimento
 
 	def to_s
 		"#{@nombre} , #{@proteinas} , #{@carbohidratos} , #{@lipidos} , #{@gei} , #{@terreno}"
+	end
+
+	def <=> (otro_alimento)
+		v_energ <=> otro_alimento.v_energ
 	end
 
 	def v_energ
