@@ -239,7 +239,10 @@ RSpec.describe P6 do
 		it "Porcentaje de hidratos de carbono del conjunto de alimentos correcto" do
 			expect(@plato.por_h_carb).to eq("2.14%")
 		end
+	end
 
+	it "Valor calórico del conjunto de alimentos (kcal) correcto" do
+		expect(@plato.vct).to eq(23)
 	end
  end
 
