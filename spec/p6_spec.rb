@@ -242,11 +242,11 @@ RSpec.describe P6 do
 	end
 
 	it "Valor calórico del conjunto de alimentos (kcal) correcto" do
-		expect(@plato.vct).to eq(9568)
+		expect(@plato.vct).to eq(9.57)
 	end
 
 	it "Plato formateado correctamente" do
-		expect(@plato.to_s).to eq("14.0,queso , 2.5,lentejas , 8.0,chocolate")
+		expect(@plato.to_s).to eq("Plato Chocolate -> 8.0 Lentejas -> 2.5 Queso -> 14.0 ")
 	end
  end
 

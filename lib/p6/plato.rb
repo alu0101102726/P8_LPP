@@ -67,10 +67,24 @@ class Plato
 		vct_total = 0
 
 		while ( i_val != nil)
-			vct_total += (i_val.value).v_energ * i_cantidad.value
+			vct_total += (i_val.value).v_energ * (i_cantidad.value/1000)
 			i_val = i_val.next
 		end
 
-		return vct_total
+		return vct_total.round(2)
+	end
+
+	def to_s
+		cadena = "#{@nombre} "
+		aux_alim = @conjunto_alimentos.head
+		aux_cantidad = @conjunto_cantidades.head
+
+		while (aux_alim != nil)
+			cadena += "#{aux_alim.value.nombre} -> #{aux_cantidad.value} "
+			aux_alim = aux_alim.next
+			aux_cantidad = aux_cantidad.next
+		end
+		return cadena
+
 	end
 end

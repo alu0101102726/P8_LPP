@@ -11,6 +11,17 @@ class Lista
 		@head = head
 		@tail = tail
 	end
+	
+	def to_s
+		aux = @head
+		cadena = ""
+
+		while (aux != nil)
+			cadena += "#{aux.value.nombre} "
+			aux = aux.next
+		end
+		return cadena
+	end
 
 	def each
 		i = self.head
