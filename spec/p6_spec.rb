@@ -266,7 +266,7 @@ RSpec.describe P6 do
 	end
 
 	it "Valor total del gei correcto" do
-		expect(@plato.t_gei).to eq(2)
+		expect(@plato.t_gei).to eq(0.17)
 	end
  end
 

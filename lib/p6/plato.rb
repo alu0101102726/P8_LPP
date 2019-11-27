@@ -93,4 +93,17 @@ class Plato_heredada < Plato
 	def initialize (nombre, conj_alimen , conj_canti)
 		super(nombre, conj_alimen , conj_canti)
 	end
+
+	def t_gei
+		aux = @conjunto_alimentos.head
+		aux_t = @conjunto_cantidades.head
+		t_gei = 0
+
+		while ( aux != nil)
+			t_gei += aux.value.gei * (aux_t.value/1000)
+			aux = aux.next
+			aux_t = aux_t.next
+		end
+		return t_gei.round(2)
+	end
 end
