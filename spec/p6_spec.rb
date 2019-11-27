@@ -204,16 +204,15 @@ RSpec.describe P6 do
  describe Plato do
 	before(:all) do
 		@conjunto_alim = Lista.new(nil,nil)
-		@espanola = Lista.new(nil,nil)
-		@vasca = Lista.new(nil,nil)
-
-		@conjunto_alim.insert_all_elements_head([@vasca,@espanola])
+		@conjunto_cant = Lista.new(nil,nil)
 		@tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
 		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
 		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
 		
-		@plato = Plato.new("Plato", @conjunto_alim)
+		@conjunto_alim.insert_all_elements_head([@queso, @lentejas, @chocolate])
+		@conjunto_cant.insert_all_elements_head([12.0,2.5,8.0])
+		@plato = Plato.new("Plato", @conjunto_alim , @conjunto_cant)
 	end
 
 	it "Obteniendo el nombre de un plato" do
