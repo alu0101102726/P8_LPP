@@ -235,6 +235,11 @@ RSpec.describe P6 do
 		it "Porcentaje de lípidos del conjunto de alimentos correcto" do
 			expect(@plato.por_lipid).to eq("2.88%")
 		end
+
+		it "Porcentaje de hidratos de carbono del conjunto de alimentos correcto" do
+			expect(@plato.por_h_carb).to eq("2.88%")
+		end
+
 	end
  end
 
