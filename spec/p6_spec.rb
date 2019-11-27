@@ -211,7 +211,7 @@ RSpec.describe P6 do
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
 		
 		@conjunto_alim.insert_all_elements_head([@queso, @lentejas, @chocolate])
-		@conjunto_cant.insert_all_elements_head([12.0,2.5,8.0])
+		@conjunto_cant.insert_all_elements_head([14.0,2.5,8.0])
 		@plato = Plato.new("Plato", @conjunto_alim , @conjunto_cant)
 	end
 
@@ -229,7 +229,7 @@ RSpec.describe P6 do
 
 	context "Comprobando los porcentajes" do
 		it "Porcentaje de poteínas del conjunto de alimentos correcto" do
-			expect(@plato.por_prot).to eq()
+			expect(@plato.por_prot).to eq("1.84%")
 		end
 	end
  end
