@@ -94,6 +94,17 @@ class Plato_heredada < Plato
 		super(nombre, conj_alimen , conj_canti)
 	end
 
+	def to_s
+		cadena = "#{@nombre} "
+		aux_alim = @conjunto_alimentos.head
+
+		while (aux_alim != nil)
+			cadena += "#{aux_alim.value.nombre} -> #{aux_alim.value.gei} , #{aux_alim.value.terreno} "
+			aux_alim = aux_alim.next
+		end
+		return cadena
+	end
+
 	def t_gei
 		aux = @conjunto_alimentos.head
 		aux_t = @conjunto_cantidades.head
