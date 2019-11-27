@@ -264,6 +264,10 @@ RSpec.describe P6 do
 		@plato = Plato_heredada.new("Plato", @conjunto_alim , @conjunto_cant)
 
 	end
+
+	it "Valor total del gei correcto" do
+		expect(@plato.t_gei).to eq(2)
+	end
  end
 
 end

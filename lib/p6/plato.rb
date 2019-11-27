@@ -88,3 +88,9 @@ class Plato
 
 	end
 end
+
+class Plato_heredada < Plato
+	def initialize (nombre, conj_alimen , conj_canti)
+		super(nombre, conj_alimen , conj_canti)
+	end
+end
