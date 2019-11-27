@@ -226,6 +226,12 @@ RSpec.describe P6 do
 	it "Existe un conjunto de cantidades de alimentos en gramos" do
 		expect(@plato).to respond_to(:conjunto_cantidades)
 	end
+
+	context "Comprobando los porcentajes" do
+		it "Porcentaje de poteínas del conjunto de alimentos correcto" do
+			expect(@plato.por_prot).to eq()
+		end
+	end
  end
 
 end
