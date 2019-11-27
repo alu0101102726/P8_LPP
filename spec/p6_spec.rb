@@ -231,6 +231,10 @@ RSpec.describe P6 do
 		it "Porcentaje de poteínas del conjunto de alimentos correcto" do
 			expect(@plato.por_prot).to eq("1.84%")
 		end
+
+		it "Porcentaje de lípidos del conjunto de alimentos correcto" do
+			expect(@plato.por_lipid).to eq("1.8%")
+		end
 	end
  end
 
