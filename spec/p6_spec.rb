@@ -242,7 +242,7 @@ RSpec.describe P6 do
 	end
 
 	it "Valor calórico del conjunto de alimentos (kcal) correcto" do
-		expect(@plato.vct).to eq(23)
+		expect(@plato.vct).to eq(9568)
 	end
  end
 

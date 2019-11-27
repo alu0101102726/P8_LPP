@@ -60,5 +60,17 @@ class Plato
 		 @h_carb = (h_carb_total / cant_total)*100
 		 return "#{@h_carb.round(2)}%"
 	end
+	
+	def vct
+		i_val = @conjunto_alimentos.head
+		i_cantidad = @conjunto_cantidades.head
+		vct_total = 0
 
+		while ( i_val != nil)
+			vct_total += (i_val.value).v_energ * i_cantidad.value
+			i_val = i_val.next
+		end
+
+		return vct_total
+	end
 end
