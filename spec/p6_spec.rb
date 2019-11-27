@@ -270,7 +270,7 @@ RSpec.describe P6 do
 	end
 
 	it "Valor total de terreno correcto" do
-		expect(@plato.t_terreno).to eq(0.17)
+		expect(@plato.t_terreno).to eq(0.61)
 	end
 
  end

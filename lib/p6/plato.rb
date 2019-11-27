@@ -106,4 +106,18 @@ class Plato_heredada < Plato
 		end
 		return t_gei.round(2)
 	end
+
+	def t_terreno
+		aux = @conjunto_alimentos.head
+		aux_t = @conjunto_cantidades.head
+		t_terreno = 0
+
+		while ( aux != nil)
+			t_terreno += aux.value.terreno * (aux_t.value/1000)
+			aux = aux.next
+			aux_t = aux_t.next
+		end
+		return t_terreno.round(2)
+	end
+
 end
