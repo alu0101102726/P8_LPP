@@ -268,6 +268,11 @@ RSpec.describe P6 do
 	it "Valor total del gei correcto" do
 		expect(@plato.t_gei).to eq(0.17)
 	end
+
+	it "Valor total de terreno correcto" do
+		expect(@plato.t_terreno).to eq(0.17)
+	end
+
  end
 
 end
