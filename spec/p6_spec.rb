@@ -223,6 +223,10 @@ RSpec.describe P6 do
 	it "Existe un conjunto de alimentos" do
 		expect(@plato).to respond_to(:conjunto_alimentos)
 	end
+
+	it "Existe un conjunto de cantidades de alimentos en gramos" do
+		expect(@plato).to respond_to(:conjunto_cantidades)
+	end
  end
 
 end
