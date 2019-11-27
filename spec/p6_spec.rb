@@ -273,6 +273,10 @@ RSpec.describe P6 do
 		expect(@plato.t_terreno).to eq(0.61)
 	end
 
+	it "Eficiencia energética formateada correcta" do
+		expect(@plato.to_s).to eq("Plato Chocolate -> 2.3 , 3.4 Lentejas -> 0.4 , 3.4 Queso -> 11.0 , 41.0 ")
+	end
+
  end
 
 end
