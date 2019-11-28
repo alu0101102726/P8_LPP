@@ -281,6 +281,10 @@ RSpec.describe P6 do
 		it "Clase del objeto correcta " do
 			expect(@plato.instance_of? Plato_heredada).to eq(true)
 		end
+
+		it "La clase padre de Plato_heredada es Plato" do
+			expect(Plato_heredada.superclass).to eq(Plato)
+		end
 	end
 
  end
