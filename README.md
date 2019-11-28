@@ -1,10 +1,10 @@
-# Practica 7: Listas Doblemente Enlazadas usando TDD 
+# Practica 8: Herencia y módulos usando TDD D -> master, origin/master, origin/HEAD, desarrollo) Enumerable de platos comprobado
 
 ## Autor: Carlos Díaz Calzadilla | <alu0101102726@ull.edu.es>
 
 ## Objetivo de la practica  
 
- - Desarrollar una clase Lista mediante la metodologia de desarrollo dirigido por pruebas.
+ - Desarrollar una clase Plato y plato heredada mediante la metodologia de desarrollo dirigido por pruebas.
  - Escribir la prueba del metodo.
  - Verificar que la prueba falla.
  - Escribir la implementacion del metodo.
@@ -12,7 +12,6 @@
 
 ## Arbol de directorios
 ```bash
-
 .
 ├── bin
 │   ├── console
@@ -24,6 +23,7 @@
 │   ├── p6
 │   │   ├── alimento.rb
 │   │   ├── lista.rb
+│   │   ├── plato.rb
 │   │   └── version.rb
 │   └── p6.rb
 ├── LICENSE.txt
@@ -35,13 +35,53 @@
 │   └── spec_helper.rb
 └── tmp
 
-
 ```
 
 ## Commits
 ``` bash
+ - - - - - - - PRÁCTICA 8 - - - - 
+* db74bf4 (HEAD -> master, desarrollo) Enumerable de platos comprobado
+* 1ad85dc Prueba comparable operador clamp
+* e54d7b3 Prueba comparable operador between
+* 8d4095a Prueba comparable operador ==
+* 3efcdbb Prueba comparable operador >=
+* c061651 Prueba comparable operador <
+* e0cc255 Clase plato ahora es comparable
+* 6e144a7 Prueba la clase plato heredada está en la jerarquía de plato
+* 8865d76 Prueba la clase plato heredad es hija de Plato
+* 38f6f23 Prueba clase del objeto correcta
+* 1239a18 Código obtener eficiencia energética formateada | CORRECTO
+* 63c251b Prueba obtener eficiencia energética formateada | ERROR
+* 1498a98 Código valor total del terreno | CORRECTO
+* 3d9a473 Prueba total de terreno | ERROR
+* 7b83144 Código valor total del gei | CORRECTO
+* f574889 Prueba total de gei | ERROR
+* 211a894 Creando prueba para inicializar clase plato heredada | ERROR
+* 1e69a04 Código plato formateado | CORRECTO
+* 8a1bbe3 Prueba obtener plato formateado | ERROR
+* eedc71b Código valor calórico total del conjunto de alimentos | CORRECTO
+* a5ee90e Prueba del valor calórico total del conjunto de alimentos | ERROR
+* 33f1df7 Código porcentaje de hidratos de carbono del conjunto de alimentos | CORRECTO
+* 121bb91 Prueba porcentaje de hidratos de carbono del conjunto de alimentos | ERROR
+* f8bd080 Código porcentaje de lípidos del conjunto de alimentos | CORRECTO
+* 7f90a8f Prueba porcentaje de lípidos del conjunto de alimentos | ERROR
+* 5b9924d Creado método porcentaje de proteinas | CORRECTO
+* c5b1384 Prueba del porcentaje de proteinas | ERROR
+* 9cb120a Existe un conjunto de cantidades de alimentos en gramos | CORRECTO
+* 6bbf632 Prueba existe un conjunto de cantidades de alimentos en gramos | ERROR
+* 71ffbc0 Modificando código: Existe un conjunto de alimentos | CORRECTO
+* 70fadb9 Existe un conjunto de alimentos | ERROR
+* 8b77793 Modificado código: Obtener nombre plato | CORRECTO
+* 6dcc178 Obtener nombre plato | ERROR
+* 6cd71be Creada la clase Plato | CORRECTO
+* 37134c1 Prueba existencia de la clase Plato | ERROR
+* 049cf7e Prueba añadiendo modulos: Enumerate en Lista y añadir each | CORRECTO
+* a00bd3e Añadiendo código: Creado método <=> e include Comparable | CORRECTO
+* 50592a0 Prueba añadiendo modulos: Compare en Alimento | ERROR
+* ea0c6da Actualizando el fichero README.md
+
  - - - - - - - PRÁCTICA 7 - - - - - - -
-* 9eaa43a (HEAD -> master, desarrollo) Novena edición código: Creando estimar emisiones de metros cuadrados de uso de terreno | CORRECTO
+* 9eaa43a Novena edición código: Creando estimar emisiones de metros cuadrados de uso de terreno | CORRECTO
 * 70a7c62 Novena Prueba: Prueba para estimar emisiones de metros cuadrados de uso de terreno | ERROR
 * 2fc9605 Estimados los geis anuales de todas las dietas | CORRECTO
 * 6f4cdf2 Estimados los geis diarios de todas las dietas | CORRECTO
