@@ -308,7 +308,8 @@ RSpec.describe P6 do
 		@d_c_locura_carne=Lista.new(nil,nil)
 		@d_c_locura_carne.insert_all_elements_head([200 , 300 , 200 , 200 , 200 , 100])
 		@plato_locura_carne = Plato_heredada.new("Locura carne" , @d_a_locura_carne , @d_c_locura_carne)
-
+		@menu = Lista.new(nil,nil)
+		@menu.insert_all_elements_head([@plato_espanol , @plato_vasco , @plato_vegetaria , @plato_vegetaliana , @plato_locura_carne])
 
 	end
 
@@ -363,6 +364,30 @@ RSpec.describe P6 do
 			expect(@plato_locura_carne.clamp(@plato_vasco,@plato_espanol)).to eq(@plato_vasco)
 		end
 	end
+
+	context "Prueba dieta española" do
+		it "Probando collect(Enumerable), funciona correctamente" do
+			expect(@menu.collect{|x| x.vct < 3000}).to eq([true,true,true,true,true])
+		end
+
+		it "Probando select(Enumerable), funciona correctamente" do
+			expect(@menu.select{|x| x.vct > 3000}).to eq([])
+		end
+
+		it "Probando max(Enumerable), funciona correctamente" do
+			expect(@menu.max).to eq(@plato_espanol)
+		end
+
+		it "Probando min(Enumerable), funciona correctamente" do
+			expect(@menu.min).to eq(@plato_vasco)
+		end
+
+		it "Probando sort(Enumerable), funciona correctamente" do
+			expect(@menu.sort{|a,b| a <=> b}).to eq([@plato_locura_carne , @plato_espanol , @plato_vegetaliana , @plato_vegetaria , @plato_vasco])
+		end
+
+	end
+
 
  end
 
