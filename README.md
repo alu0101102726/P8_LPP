@@ -1,4 +1,4 @@
-# Practica 8: Herencia y módulos usando TDD D -> master, origin/master, origin/HEAD, desarrollo) Enumerable de platos comprobado
+# Practica 8: Herencia y módulos usando TDD 
 
 ## Autor: Carlos Díaz Calzadilla | <alu0101102726@ull.edu.es>
 
