@@ -285,6 +285,10 @@ RSpec.describe P6 do
 		it "La clase padre de Plato_heredada es Plato" do
 			expect(Plato_heredada.superclass).to eq(Plato)
 		end
+
+		it "La clase plato_heredada está en la jerarquía de Plato" do
+			expect(@plato.is_a?Plato).to eq(true)
+		end
 	end
 
  end
