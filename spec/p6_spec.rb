@@ -209,6 +209,13 @@ RSpec.describe P6 do
 		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
 		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
+		@leche = Alimento.new("Leche" , 3.3 , 4.8 , 3.2 , 3.2 , 8.9)
+		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+		@huevo = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
+		@nuez = Alimento.new("Nuez" , 20.0 , 21.0 , 54.0 , 0.3 , 7.9)
+		@carne_vaca = Alimento.new("Carne de vaca" , 21.1 , 0.0 , 3.1 , 50.0 , 164.0)
+		@carne_cordero = Alimento.new("Carne de cordero" , 18.0 , 0.0 , 17.0 , 20.0 , 185.0)
+		@cerveza = Alimento.new("Cerveza" , 0.5 , 3.6 , 0.0 , 0.24 , 0.22)
 		
 		@conjunto_alim.insert_all_elements_head([@queso, @lentejas, @chocolate])
 		@conjunto_cant.insert_all_elements_head([14.0,2.5,8.0])
@@ -258,10 +265,50 @@ RSpec.describe P6 do
 		@queso = Alimento.new("Queso", 25.0 , 1.3 , 33.0 , 11.0 ,41.0)
 		@lentejas = Alimento.new("Lentejas", 23.5 , 52.0 , 1.4 , 0.4 , 3.4)
 		@chocolate = Alimento.new("Chocolate", 5.3 , 47.0 , 30.0 , 2.3 , 3.4)
-		
+		@leche = Alimento.new("Leche" , 3.3 , 4.8 , 3.2 , 3.2 , 8.9)
+		@pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+		@huevo = Alimento.new("Huevos" , 13.0 , 1.1 , 11.0 , 4.2 , 5.7)
+		@nuez = Alimento.new("Nuez" , 20.0 , 21.0 , 54.0 , 0.3 , 7.9)
+		@carne_vaca = Alimento.new("Carne de vaca" , 21.1 , 0.0 , 3.1 , 50.0 , 164.0)
+		@carne_cordero = Alimento.new("Carne de cordero" , 18.0 , 0.0 , 17.0 , 20.0 , 185.0)
+		@cerveza = Alimento.new("Cerveza" , 0.5 , 3.6 , 0.0 , 0.24 , 0.22)
+		@cerdo = Alimento.new("Cerdo" , 21.5 , 0.0 , 6.3 , 7.6 , 11.0)
+		@salmon = Alimento.new("Salmón" , 19.9 , 0.0 , 13.6 , 6.0 , 3.7)
+
 		@conjunto_alim.insert_all_elements_head([@queso, @lentejas, @chocolate])
 		@conjunto_cant.insert_all_elements_head([14.0,2.5,8.0])
 		@plato = Plato_heredada.new("Plato", @conjunto_alim , @conjunto_cant)
+
+		@d_a_espanola=Lista.new(nil,nil)
+		@d_a_espanola.insert_all_elements_head([@carne_vaca , @chocolate , @queso , @lentejas , @nuez])
+		@d_c_espanola=Lista.new(nil,nil)
+		@d_c_espanola.insert_all_elements_head([100 , 100 , 200 , 100 , 200])
+		@plato_espanol = Plato_heredada.new("Espanola" , @d_a_espanola , @d_c_espanola)
+
+		@d_a_vasca=Lista.new(nil,nil)
+		@d_a_vasca.insert_all_elements_head([@lentejas , @chocolate , @nuez])
+		@d_c_vasca=Lista.new(nil,nil)
+		@d_c_vasca.insert_all_elements_head([600 , 200 , 100])
+		@plato_vasco = Plato_heredada.new("Vasco" , @d_a_vasca , @d_c_vasca)
+
+		@d_a_vegetaria=Lista.new(nil,nil)
+		@d_a_vegetaria.insert_all_elements_head([@huevo , @chocolate , @queso , @lentejas , @nuez])
+		@d_c_vegetaria=Lista.new(nil,nil)
+		@d_c_vegetaria.insert_all_elements_head([100 , 100 , 200 , 100 , 200])
+		@plato_vegetaria = Plato_heredada.new("Vegetaria" , @d_a_vegetaria , @d_c_vegetaria)
+
+		@d_a_vegetaliana=Lista.new(nil,nil)
+		@d_a_vegetaliana.insert_all_elements_head([@tofu , @chocolate , @nuez , @lentejas])
+		@d_c_vegetaliana=Lista.new(nil,nil)
+		@d_c_vegetaliana.insert_all_elements_head([100 , 100 , 300 , 200])
+		@plato_vegetaliana = Plato_heredada.new("Vegetaliana" , @d_a_vegetaliana , @d_c_vegetaliana)
+
+		@d_a_locura_carne=Lista.new(nil,nil)
+		@d_a_locura_carne.insert_all_elements_head([@carne_vaca , @carne_cordero , @pollo , @cerdo , @nuez , @salmon])
+		@d_c_locura_carne=Lista.new(nil,nil)
+		@d_c_locura_carne.insert_all_elements_head([200 , 300 , 200 , 200 , 200 , 100])
+		@plato_locura_carne = Plato_heredada.new("Locura carne" , @d_a_locura_carne , @d_c_locura_carne)
+
 
 	end
 
@@ -288,6 +335,12 @@ RSpec.describe P6 do
 
 		it "La clase plato_heredada está en la jerarquía de Plato" do
 			expect(@plato.is_a?Plato).to eq(true)
+		end
+	end
+
+	context "Probando comparable con las distintas dietas" do
+		it " El operador < funciona correctamente" do
+			expect(@plato_espanol < @plato_vasco).to eq(false)
 		end
 	end
 
