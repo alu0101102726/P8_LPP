@@ -1,10 +1,17 @@
 
 class Plato 
+
+	include Comparable
+
 	attr_reader :nombre, :conjunto_alimentos, :conjunto_cantidades
 	def initialize (nombre, conjunto_alimento, conjunto_cantidad)
 		@nombre = nombre
 		@conjunto_alimentos = conjunto_alimento
 		@conjunto_cantidades = conjunto_cantidad
+	end
+
+	def <=> (otro_plato)
+		vct <=> otro_plato.vct
 	end
 
 	def por_prot
