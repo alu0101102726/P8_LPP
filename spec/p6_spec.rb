@@ -277,6 +277,12 @@ RSpec.describe P6 do
 		expect(@plato.to_s).to eq("Plato Chocolate -> 2.3 , 3.4 Lentejas -> 0.4 , 3.4 Queso -> 11.0 , 41.0 ")
 	end
 
+	context "Probando instancias de objetos" do
+		it "Clase del objeto correcta " do
+			expect(@plato.instance_of? Plato_heredada).to eq(true)
+		end
+	end
+
  end
 
 end
