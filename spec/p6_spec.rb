@@ -350,6 +350,14 @@ RSpec.describe P6 do
 		it " El operador == funciona correctamente" do
 			expect(@plato_locura_carne == @plato_locura_carne).to eq(true)
 		end
+
+		it " El operador <= funciona correctamente" do
+			expect(@plato_locura_carne <= @plato_vasco).to eq(true)
+		end
+
+		it " El operador between funciona correctamente" do
+			expect(@plato_espanol.between?(@plato_vasco,@plato_vegetaria)).to eq(true)
+		end
 	end
 
  end
