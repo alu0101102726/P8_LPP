@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Practica+8-3A+Herencia+y+m-C3-B3dulos+usando+TDD">Practica 8: Herencia y módulos usando TDD</a>
+    <li><a href="#label-Autor-3A+Carlos+D-C3-ADaz+Calzadilla+-7C+mailto-3Aalu0101102726-40ull.edu.es">Autor: Carlos Díaz Calzadilla | <a href="mailto:alu0101102726@ull.edu.es">alu0101102726@ull.edu.es</a></a>
+    <li><a href="#label-Objetivo+de+la+practica">Objetivo de la practica</a>
+    <li><a href="#label-Arbol+de+directorios">Arbol de directorios</a>
+    <li><a href="#label-Commits">Commits</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./Guardfile.html">Guardfile</a>
+  
+    <li><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./bin/setup.html">setup</a>
+  
+    <li><a href="./p6_gemspec.html">p6.gemspec</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<h1 id="label-Practica+8-3A+Herencia+y+m-C3-B3dulos+usando+TDD">Practica 8: Herencia y módulos usando TDD<span><a href="#label-Practica+8-3A+Herencia+y+m-C3-B3dulos+usando+TDD">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h2 id="label-Autor-3A+Carlos+D-C3-ADaz+Calzadilla+-7C+mailto-3Aalu0101102726-40ull.edu.es">Autor: Carlos Díaz Calzadilla | <a href="mailto:alu0101102726@ull.edu.es">alu0101102726@ull.edu.es</a><span><a href="#label-Autor-3A+Carlos+D-C3-ADaz+Calzadilla+-7C+mailto-3Aalu0101102726-40ull.edu.es">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h2 id="label-Objetivo+de+la+practica">Objetivo de la practica<span><a href="#label-Objetivo+de+la+practica">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Desarrollar una clase <a href="Plato.html"><code>Plato</code></a> y plato heredada mediante la metodologia de desarrollo dirigido por pruebas.</p>
+</li><li>
+<p>Escribir la prueba del metodo.</p>
+</li><li>
+<p>Verificar que la prueba falla.</p>
+</li><li>
+<p>Escribir la implementacion del metodo.</p>
+</li><li>
+<p>Ejecutar las pruebas automatizadas.</p>
+</li></ul>
+
+<h2 id="label-Arbol+de+directorios">Arbol de directorios<span><a href="#label-Arbol+de+directorios">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>.
+├── bin
+│   ├── console
+│   └── setup
+├── Gemfile
+├── Gemfile.lock
+├── Guardfile
+├── lib
+│   ├── p6
+│   │   ├── alimento.rb
+│   │   ├── lista.rb
+│   │   ├── plato.rb
+│   │   └── version.rb
+│   └── p6.rb
+├── LICENSE.txt
+├── p6.gemspec
+├── Rakefile
+├── README.md
+├── spec
+│   ├── p6_spec.rb
+│   └── spec_helper.rb
+└── tmp</pre>
+
+<h2 id="label-Commits">Commits<span><a href="#label-Commits">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>- - - - - - - PRÁCTICA 8 - - - - 
+* db74bf4 (HEAD -&gt; master, desarrollo) Enumerable de platos comprobado
+* 1ad85dc Prueba comparable operador clamp
+* e54d7b3 Prueba comparable operador between
+* 8d4095a Prueba comparable operador ==
+* 3efcdbb Prueba comparable operador &gt;=
+* c061651 Prueba comparable operador &lt;
+* e0cc255 Clase plato ahora es comparable
+* 6e144a7 Prueba la clase plato heredada está en la jerarquía de plato
+* 8865d76 Prueba la clase plato heredad es hija de Plato
+* 38f6f23 Prueba clase del objeto correcta
+* 1239a18 Código obtener eficiencia energética formateada | CORRECTO
+* 63c251b Prueba obtener eficiencia energética formateada | ERROR
+* 1498a98 Código valor total del terreno | CORRECTO
+* 3d9a473 Prueba total de terreno | ERROR
+* 7b83144 Código valor total del gei | CORRECTO
+* f574889 Prueba total de gei | ERROR
+* 211a894 Creando prueba para inicializar clase plato heredada | ERROR
+* 1e69a04 Código plato formateado | CORRECTO
+* 8a1bbe3 Prueba obtener plato formateado | ERROR
+* eedc71b Código valor calórico total del conjunto de alimentos | CORRECTO
+* a5ee90e Prueba del valor calórico total del conjunto de alimentos | ERROR
+* 33f1df7 Código porcentaje de hidratos de carbono del conjunto de alimentos | CORRECTO
+* 121bb91 Prueba porcentaje de hidratos de carbono del conjunto de alimentos | ERROR
+* f8bd080 Código porcentaje de lípidos del conjunto de alimentos | CORRECTO
+* 7f90a8f Prueba porcentaje de lípidos del conjunto de alimentos | ERROR
+* 5b9924d Creado método porcentaje de proteinas | CORRECTO
+* c5b1384 Prueba del porcentaje de proteinas | ERROR
+* 9cb120a Existe un conjunto de cantidades de alimentos en gramos | CORRECTO
+* 6bbf632 Prueba existe un conjunto de cantidades de alimentos en gramos | ERROR
+* 71ffbc0 Modificando código: Existe un conjunto de alimentos | CORRECTO
+* 70fadb9 Existe un conjunto de alimentos | ERROR
+* 8b77793 Modificado código: Obtener nombre plato | CORRECTO
+* 6dcc178 Obtener nombre plato | ERROR
+* 6cd71be Creada la clase Plato | CORRECTO
+* 37134c1 Prueba existencia de la clase Plato | ERROR
+* 049cf7e Prueba añadiendo modulos: Enumerate en Lista y añadir each | CORRECTO
+* a00bd3e Añadiendo código: Creado método &lt;=&gt; e include Comparable | CORRECTO
+* 50592a0 Prueba añadiendo modulos: Compare en Alimento | ERROR
+* ea0c6da Actualizando el fichero README.md
+
+ - - - - - - - PRÁCTICA 7 - - - - - - -
+* 9eaa43a Novena edición código: Creando estimar emisiones de metros cuadrados de uso de terreno | CORRECTO
+* 70a7c62 Novena Prueba: Prueba para estimar emisiones de metros cuadrados de uso de terreno | ERROR
+* 2fc9605 Estimados los geis anuales de todas las dietas | CORRECTO
+* 6f4cdf2 Estimados los geis diarios de todas las dietas | CORRECTO
+* 87b35d8 Octava edición código: Creando estimar emisiones gei diarias | CORRECTO
+* 1d19626 Octava Prueba: Prueba para estimar la emisiones de GEI diarias | ERROR
+* 7881b58 Dieta solo carne creada | CORRECTO
+* e665636 Dieta vegetaria y vegetaliana creada | CORRECTO
+* 3b3dbe5 Dieta española y vasca creada | CORRECTO
+* 44c0daa Séptima edición código: Creando eliminar la cola | CORRECTO
+* 0952f1a Séptima Prueba: Prueba para eliminar la cola | ERROR
+* 6fb124f Sexta edición código: Creando eliminar cabeza | CORRECTO
+* 3585a8d Sexta Prueba: Prueba para eliminar la cabeza | ERROR
+* 3552b9c Quinta edición código: Creando insertar varios elementos cola | CORRECTO
+* 0862361 Quinta edición código: Creando insertar varios elementos cabeza | CORRECTO
+* 441ee4a Quinta prueba: Prueba insertar varios elementos | ERROR
+* 6227782 Cuarta edición de código: Creando inserción por la cabeza | CORRECTO
+* ad485a9 Cuarta Prueba: Prueba insertar un elemento | ERROR
+* 6f26d59 Tercera edición código: Creando el getter tail | CORRECTO
+* e93f129 Tercera Prueba: Prueba del getter tail | ERROR
+* d5e9467 Segunda edición código: Creando el getter head | CORRECTO
+* 85d7414 Segunda Prueba: Prueba getter head | ERROR
+* 72424c3 Primera edición código: Creando clase lista e inicializando la lista | CORRECTO
+* 78bfb42 Primera Prueba: Inicializando Lista | ERROR
+* 9c459f4 Herramienta Guard activada y en correcto funcionamiento
+* f2687ba Modificando el fichero README.md
+
+ - - - - - - - PRÁCTICA 6 - - - - - - - 
+* 412a5e7 Duodécima prueba: Creando impacto ambiental mujer | CORRECTO
+* 4b4e044 Undécima prueba y código: Creando impacto ambiental hombre | CORRECTO
+* c1c0a21 Décima edición código: Creando el obetener valor energético | CORRECTO
+* db751a9 Décima prueba: Prueba de obtención del valor energético | ERROR
+* 0f48a42 Novena edición código: Creando el formateari del alimento | CORRECTO
+* 40d40f1 Novena prueba: Prueba alimento formateado | ERROR
+* 82822b3 Octava edición código: Creando el getter del terreno | CORRECTO
+* ee51232 Octava prueba: Prueba del getter del terreno | ERROR
+* ad694fe Séptima edición código: Creando el getter del GEI | CORRECTO
+* 18d8da7 Séptima prueba: Prueba del getter del GEI | ERROR
+* d1c9627 Sexta edición código: Creando el getter de los lípidos | CORRECTO
+* 5e5b0a7 Sexta prueba: Prueba del getter de los lípidos | ERROR
+* 08a4796 Quinta edición código: Creando el getter de los carbohidratos | CORRECTO
+* af5386d Quinta prueba: Prueba del getter de los carbohidratos | ERROR
+* f7e0ae7 Cuarta edición código: Creando el getter de las proteinas | CORRECTO
+* 9d35163 Cuarta prueba: Prueba del getter de las proteinas | ERROR
+* e7b38a3 Tercera edición código: Creando el getter de nombre | CORRECTO
+* 2dec373 Tercera prueba: Prueba del getter del nombre | ERROR
+* 7517f8c  Segunda prueba: Instanciando Alimento | CORRECTO
+* 0b987a7 Primera edición código: Creando la clase Alimento | CORRECTO
+* 493087d Primera prueba: Inicializando Alimento | ERROR
+* 0c63079 Mejora del README.md
+* bf6f110 Elaborando el fichero README.md
+* 405529a Actualizando .gitignore
+* 08abf72 Creando la estructura bundler</pre>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
