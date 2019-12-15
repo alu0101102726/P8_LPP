@@ -118,6 +118,8 @@
 
   <section class="description">
     
+<h1 id="class-Lista-label-Lista+que+va+a+contener+un+conjutno+de+alimentos"><a href="Lista.html"><code>Lista</code></a> que va a contener un conjutno de alimentos<span><a href="#class-Lista-label-Lista+que+va+a+contener+un+conjutno+de+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
   </section>
 
   
@@ -143,7 +145,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-head-label-Atributos+de+la+Lista">Atributos de la <a href="Lista.html"><code>Lista</code></a><span><a href="#attribute-i-head-label-Atributos+de+la+Lista">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Cabeza y cola</p>
         
         </div>
       </div>
@@ -156,7 +160,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-tail-label-Atributos+de+la+Lista">Atributos de la <a href="Lista.html"><code>Lista</code></a><span><a href="#attribute-i-tail-label-Atributos+de+la+Lista">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Cabeza y cola</p>
         
         </div>
       </div>
@@ -184,13 +190,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-c-new-label-Inicializar+-28initialize-29">Inicializar (initialize)<span><a href="#method-c-new-label-Inicializar+-28initialize-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Inicializa la lista con la cabeza y cola</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 10</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">head</span>, <span class="ruby-identifier">tail</span>)
         <span class="ruby-ivar">@head</span> = <span class="ruby-identifier">head</span>
         <span class="ruby-ivar">@tail</span> = <span class="ruby-identifier">tail</span>
@@ -226,13 +234,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-each-label-Recorrido+de+la+lista+-28each-29">Recorrido de la lista (each)<span><a href="#method-i-each-label-Recorrido+de+la+lista+-28each-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Recorrer la lista</p>
           
           
 
           
           <div class="method-source-code" id="each-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 26</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each</span>
         <span class="ruby-identifier">i</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-keyword">while</span>( <span class="ruby-identifier">i</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) 
@@ -263,13 +273,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-erase_element_head-label-Eliminar+un+elemento+cabeza+-28erase_element_head-29">Eliminar un elemento cabeza (erase_element_head)<span><a href="#method-i-erase_element_head-label-Eliminar+un+elemento+cabeza+-28erase_element_head-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite eliminar un valor al principio de la lista</p>
           
           
 
           
           <div class="method-source-code" id="erase_element_head-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 84</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 107</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">erase_element_head</span> 
         <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@head</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@tail</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
                 <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@head</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@tail</span>) <span class="ruby-keyword">then</span>
@@ -306,13 +318,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-erase_element_tail-label-Eliminar+un+elemento+cola+-28erase_element_tail-29">Eliminar un elemento cola (erase_element_tail)<span><a href="#method-i-erase_element_tail-label-Eliminar+un+elemento+cola+-28erase_element_tail-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite eliminar un valor al final de la lista</p>
           
           
 
           
           <div class="method-source-code" id="erase_element_tail-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 98</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 123</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">erase_element_tail</span>
         <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@head</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@tail</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
                 <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@head</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@tail</span>) <span class="ruby-keyword">then</span>
@@ -349,13 +363,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-expc_gei-label-Expectativa+gei+-28excp_gei-29">Expectativa gei (excp_gei)<span><a href="#method-i-expc_gei-label-Expectativa+gei+-28excp_gei-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite obtener la expectativa de gei segú el número de dias</p>
           
           
 
           
           <div class="method-source-code" id="expc_gei-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 112</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 140</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expc_gei</span>(<span class="ruby-identifier">n_dias</span>)
         <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@head</span>
         <span class="ruby-identifier">suma</span> = <span class="ruby-value">0</span>
@@ -388,13 +404,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-expc_m2t-label-Expectativa+terreno+-28excp_m2t-29">Expectativa terreno (excp_m2t)<span><a href="#method-i-expc_m2t-label-Expectativa+terreno+-28excp_m2t-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite obtener la expectativa de terreno</p>
           
           
 
           
           <div class="method-source-code" id="expc_m2t-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 122</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 152</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expc_m2t</span>
         <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@head</span>
         <span class="ruby-identifier">suma</span> = <span class="ruby-value">0</span>
@@ -427,13 +445,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-insert_all_elements_head-label-Insertar+varios+elementos+cabeza+-28insert_all_elements_head-29">Insertar varios elementos cabeza (insert_all_elements_head)<span><a href="#method-i-insert_all_elements_head-label-Insertar+varios+elementos+cabeza+-28insert_all_elements_head-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite insertar varios valores al inicio de la lista</p>
           
           
 
           
           <div class="method-source-code" id="insert_all_elements_head-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 62</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insert_all_elements_head</span> (<span class="ruby-identifier">array</span>)
         <span class="ruby-identifier">@@number_elements_list</span> = <span class="ruby-value">0</span>
         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
@@ -467,13 +487,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-insert_all_elements_tail-label-Insertar+varios+elementos+cola+-28insert_all_element_tail-29">Insertar varios elementos cola (insert_all_element_tail)<span><a href="#method-i-insert_all_elements_tail-label-Insertar+varios+elementos+cola+-28insert_all_element_tail-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite insertar varios elementos al final de la lista</p>
           
           
 
           
           <div class="method-source-code" id="insert_all_elements_tail-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 73</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 94</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insert_all_elements_tail</span> (<span class="ruby-identifier">array</span>)
         <span class="ruby-identifier">@@number_elements_list</span> = <span class="ruby-value">0</span>
         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
@@ -507,13 +529,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-insert_element_head-label-Insertar+un+elemento+cabeza+-28insert_element_head-29">Insertar un elemento cabeza (insert_element_head)<span><a href="#method-i-insert_element_head-label-Insertar+un+elemento+cabeza+-28insert_element_head-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite insertar un valor al comienzo de la lista</p>
           
           
 
           
           <div class="method-source-code" id="insert_element_head-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 34</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insert_element_head</span>( <span class="ruby-identifier">valor</span> )
         <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@head</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@tail</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
                 <span class="ruby-identifier">node</span> = <span class="ruby-constant">Nodo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">valor</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
@@ -550,13 +574,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-insert_element_tail-label-Insertar+un+elemento+cola+-28insert_element_tail-29">Insertar un elemento cola (insert_element_tail)<span><a href="#method-i-insert_element_tail-label-Insertar+un+elemento+cola+-28insert_element_tail-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite insertar un valor al final de la lista</p>
           
           
 
           
           <div class="method-source-code" id="insert_element_tail-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 48</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 64</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insert_element_tail</span>( <span class="ruby-identifier">valor</span> )
         <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@head</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@tail</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
                 <span class="ruby-identifier">node</span> = <span class="ruby-constant">Nodo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">valor</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
@@ -593,13 +619,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-Formateo+-28to_s-29">Formateo (to_s)<span><a href="#method-i-to_s-label-Formateo+-28to_s-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Formateo de la lista</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 15</span>
+            <pre><span class="ruby-comment"># File lib/p6/lista.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
         <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@head</span>
         <span class="ruby-identifier">cadena</span> = <span class="ruby-string">&quot;&quot;</span>
