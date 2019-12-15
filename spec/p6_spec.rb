@@ -444,6 +444,10 @@ describe Plato_heredada do
 		expect(@plato3.huella_nutricional).to eq(1.2)
 		expect(@plato4.huella_nutricional).to eq(1.4)
 	end
+
+	it "Plato con mayor huella nutricional menú" do
+		expect(@menu1.max).to eq(@plato2)
+	end
 end
 
 end
