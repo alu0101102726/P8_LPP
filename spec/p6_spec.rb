@@ -387,8 +387,63 @@ RSpec.describe P6 do
 		end
 
 	end
-
-
  end
+
+describe Plato_heredada do
+	before(:all) do
+		
+		@alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+		@alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+		@alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+		@alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+		@alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+		@alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+		@alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+		@alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+		@alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+		@alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+		@alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+		@alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+		@listac = Lista.new(nil,nil)
+		@listae = Lista.new(nil,nil)
+		@listav = Lista.new(nil,nil)
+		@listavegr = Lista.new(nil,nil)
+		@listavegl = Lista.new(nil,nil)
+
+		@listav_c = Lista.new(nil,nil)
+		@listae_c = Lista.new(nil,nil)
+		@listac_c = Lista.new(nil,nil)
+		@listavegr_c = Lista.new(nil,nil)
+		@listavegl_c = Lista.new(nil,nil)
+
+		@listac.insert_all_elements_head( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
+		@listae.insert_all_elements_head( [ @alim3,@alim5,@alim9 ])
+		@listav.insert_all_elements_head( [ @alim1,@alim3,@alim2,@alim5,@alim7 ])
+		@listavegr.insert_all_elements_head( [ @alim8,@alim4,@alim3,@alim9,@alim5 ])
+		@listavegl.insert_all_elements_head( [ @alim8,@alim3,@alim9,@alim5 ])
+
+		@listav_c.insert_all_elements_head([4,2,4,2,1])
+		@listae_c.insert_all_elements_head([15,3,8])
+		@listac_c.insert_all_elements_head([15,7,5,3.5,4])
+		@listavegr_c.insert_all_elements_head( [2,5,2.5,3.5,8])
+
+		@plato1 = Plato.new("Plato de carne",@listac,@listac_c)
+		@plato2 = Plato.new("Plato español",@listae,@listae_c)
+		@plato3 = Plato.new("Plato vasco",@listav,@listav_c)
+		@plato4 = Plato.new("Plato vegetariano",@listavegr,@listavegr_c)
+		@plato5 = Plato.new("Plato vegetaliano",@listavegl, @listavegl_c)
+	
+		@menu1 = [@plato1,@plato2,@plato4]
+		@menu2 = [@plato1,@plato4,@plato3]
+	end
+	
+	it "Huella nutricional" do
+		expect(@plato1.huella_nutricional).to eq(1.6)
+		expect(@plato2.huella_nutricional).to eq(1.67)
+		expect(@plato3.huella_nutricional).to eq(1.2)
+		expect(@plato4.huella_nutricional).to eq(1.4)
+	end
+end
 
 end

@@ -10,6 +10,37 @@ class Plato
 		@conjunto_cantidades = conjunto_cantidad
 	end
 
+	def huella_nutricional 
+		
+		indices_energ = conjunto_alimentos.zip(conjunto_cantidades).collect do |alimento , cantidad| 
+
+			if ((alimento.v_energ * cantidad) < 670)
+				1.0
+			elsif ((alimento.v_energ * cantidad) > 830)
+				3.0
+			else
+				2.0
+			end
+
+		end
+
+		indices_gei = conjunto_alimentos.zip(conjunto_cantidades).collect do |alimento , cantidad| 
+
+			if ((alimento.gei * cantidad) < 800)
+				1.0
+			elsif ((alimento.gei * cantidad) > 1200)
+				3.0
+			else
+				2.0
+			end
+
+		end
+
+		sum_indices1 = indices_energ.sum
+		sum_indices2 = indices_gei.sum
+		return (( sum_indices1 + sum_indices2 ) / (conjunto_alimentos.count * 2)).round(2)
+	end
+
 	def <=> (otro_plato)
 		vct <=> otro_plato.vct
 	end
