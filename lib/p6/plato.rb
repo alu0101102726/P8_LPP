@@ -143,6 +143,10 @@ class Plato_heredada < Plato
 		return cadena
 	end
 
+	def <=> (otro_plato)
+		huella_nutricional <=> otro_plato.huella_nutricional
+	end
+
 	def t_gei
 		aux = @conjunto_alimentos.head
 		aux_t = @conjunto_cantidades.head
