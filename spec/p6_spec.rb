@@ -451,6 +451,10 @@ describe Plato_heredada do
 	it "Plato con mayor huella nutricional menú" do
 		expect(@menu1.max).to eq(@plato2)
 	end
+
+	it "Comprobando lista de precios" do
+		expect(precio(@menu1,@precio1)).to eq([41.75,16.7,53.44])
+	end
 end
 
 end
