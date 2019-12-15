@@ -453,7 +453,7 @@ describe Plato_heredada do
 	end
 
 	it "Comprobando lista de precios" do
-		expect(precio(@menu1,@precio1)).to eq([41.75,16.7,53.44])
+		expect(precio(@menu1,@precio1)).to eq([40.0,16.0,51.2])
 	end
 end
 
