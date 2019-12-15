@@ -106,6 +106,12 @@
 
   <section class="description">
     
+<h1 id="class-Alimento-label-Clase+alimento+donde+se+define+cada+alimento+y+sus+propiedades">Clase alimento donde se define cada alimento y sus propiedades<span><a href="#class-Alimento-label-Clase+alimento+donde+se+define+cada+alimento+y+sus+propiedades">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<dl class="rdoc-list note-list"><dt>Autor
+<dd>
+<p>Carlos Díaz Calzadilla</p>
+</dd></dl>
+
   </section>
 
   
@@ -131,7 +137,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-carbohidratos-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-carbohidratos-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -144,7 +152,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-gei-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-gei-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -157,7 +167,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-lipidos-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-lipidos-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -170,7 +182,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-nombre-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-nombre-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -183,7 +197,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-proteinas-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-proteinas-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -196,7 +212,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-terreno-label-Atributos+de+los+alimentos">Atributos de los alimentos<span><a href="#attribute-i-terreno-label-Atributos+de+los+alimentos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del alimento, proteinas , corbohidratos , lipidos , gases de efecto invernadero y terreno</p>
         
         </div>
       </div>
@@ -224,13 +242,16 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-c-new-label-Inicializar+-28initialize-29">Inicializar (initialize)<span><a href="#method-c-new-label-Inicializar+-28initialize-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-constant">Inicializa</span> <span class="ruby-identifier">el</span> <span class="ruby-identifier">alimento</span> <span class="ruby-identifier">con</span> <span class="ruby-identifier">los</span> <span class="ruby-identifier">argumentos</span> <span class="ruby-identifier">necesarios</span>
+</pre>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 5</span>
+            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">nom</span> , <span class="ruby-identifier">prot</span> , <span class="ruby-identifier">carbohid</span> , <span class="ruby-identifier">lip</span> , <span class="ruby-identifier">ge</span> , <span class="ruby-identifier">ter</span>)
         <span class="ruby-ivar">@nombre</span> = <span class="ruby-identifier">nom</span>
         <span class="ruby-ivar">@proteinas</span> , <span class="ruby-ivar">@carbohidratos</span> , <span class="ruby-ivar">@lipidos</span> = <span class="ruby-identifier">prot</span> , <span class="ruby-identifier">carbohid</span> , <span class="ruby-identifier">lip</span>
@@ -267,13 +288,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-3C-3D-3E-label-Comparable">Comparable<span><a href="#method-i-3C-3D-3E-label-Comparable">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite hacer comparaciones &lt;=,&gt;=,==,between,clamp</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 15</span>
+            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span> (<span class="ruby-identifier">otro_alimento</span>)
         <span class="ruby-identifier">v_energ</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">otro_alimento</span>.<span class="ruby-identifier">v_energ</span>
 <span class="ruby-keyword">end</span></pre>
@@ -300,13 +323,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-imp_amb-label-Impacto+ambiental+-28imp_amb-29">Impacto ambiental (imp_amb)<span><a href="#method-i-imp_amb-label-Impacto+ambiental+-28imp_amb-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Se obtiene el impacto</p>
           
           
 
           
           <div class="method-source-code" id="imp_amb-source">
-            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 23</span>
+            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">imp_amb</span> ( <span class="ruby-identifier">arry_gei</span> , <span class="ruby-identifier">arry_terreno</span> , <span class="ruby-identifier">cantidad</span>)
         <span class="ruby-identifier">suma</span> = <span class="ruby-value">0</span>
         <span class="ruby-identifier">suma</span> = <span class="ruby-identifier">suma</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">arry_gei</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">arry_terreno</span>[<span class="ruby-value">0</span>])<span class="ruby-operator">*</span><span class="ruby-identifier">cantidad</span>[<span class="ruby-value">0</span>]
@@ -337,13 +362,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-Formateo+-28to_s-29">Formateo (to_s)<span><a href="#method-i-to_s-label-Formateo+-28to_s-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Formatea el alimento</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 11</span>
+            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
         <span class="ruby-node">&quot;#{@nombre} , #{@proteinas} , #{@carbohidratos} , #{@lipidos} , #{@gei} , #{@terreno}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -370,13 +397,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-v_energ-label-Valor+energ-C3-A9tico+-28v_energ-29">Valor energético (v_energ)<span><a href="#method-i-v_energ-label-Valor+energ-C3-A9tico+-28v_energ-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el valor energético del alimento</p>
           
           
 
           
           <div class="method-source-code" id="v_energ-source">
-            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 19</span>
+            <pre><span class="ruby-comment"># File lib/p6/alimento.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">v_energ</span>
         <span class="ruby-keyword">return</span> ((<span class="ruby-ivar">@proteinas</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>) <span class="ruby-operator">+</span> (<span class="ruby-ivar">@carbohidratos</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>) <span class="ruby-operator">+</span> (<span class="ruby-ivar">@lipidos</span> <span class="ruby-operator">*</span> <span class="ruby-value">9</span>))
 <span class="ruby-keyword">end</span></pre>
