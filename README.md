@@ -1,10 +1,10 @@
-# Practica 8: Herencia y módulos usando TDD 
+# Practica 9: Programación funcional
 
 ## Autor: Carlos Díaz Calzadilla | <alu0101102726@ull.edu.es>
 
 ## Objetivo de la practica  
 
- - Desarrollar una clase Plato y plato heredada mediante la metodologia de desarrollo dirigido por pruebas.
+ - Desarrollar programación funcional mediante la metodologia de desarrollo dirigido por pruebas.
  - Escribir la prueba del metodo.
  - Verificar que la prueba falla.
  - Escribir la implementacion del metodo.
@@ -16,6 +16,7 @@
 ├── bin
 │   ├── console
 │   └── setup
+├── docs
 ├── Gemfile
 ├── Gemfile.lock
 ├── Guardfile
@@ -39,8 +40,21 @@
 
 ## Commits
 ``` bash
+ - - - - - - - PRÁCTICA 9 - - - -
+* 60ba037 (desarrollo,HEAD -> master) COMENTARIOS REALIZADOS EN TODO EL CÓDIGO
+* 112b52b Generado fichero Rdocs con nueva información
+* 209104c Clase Lista comentada Rdoc
+* 1d2300b Mejorando la documentación
+* 2919a6f Documentación Rdoc creada
+* 972fb15 Código de la función realizado | CORRECTO
+* 89d7c55 Prueba precios | ERROR
+* fb319c8 Modificando comparable para usar Huella Nutricional
+* 8b9af1d Prueba max plato huella nutricional | CORRECTO
+* 822da52 Prueba Huella nutricional | CORRECTA
+* 3438a11 Actualizando README.md
+
  - - - - - - - PRÁCTICA 8 - - - - 
-* db74bf4 (HEAD -> master, desarrollo) Enumerable de platos comprobado
+* db74bf4 Enumerable de platos comprobado
 * 1ad85dc Prueba comparable operador clamp
 * e54d7b3 Prueba comparable operador between
 * 8d4095a Prueba comparable operador ==
