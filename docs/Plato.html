@@ -112,6 +112,12 @@
 
   <section class="description">
     
+<h1 id="class-Plato-label-Clase+Plato+donde+se+define+cada+plato-2C+sus+alimentos+y+cantidades">Clase <a href="Plato.html"><code>Plato</code></a> donde se define cada plato, sus alimentos y cantidades<span><a href="#class-Plato-label-Clase+Plato+donde+se+define+cada+plato-2C+sus+alimentos+y+cantidades">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<dl class="rdoc-list note-list"><dt>Autor
+<dd>
+<p>Carlos Díaz Calzadilla</p>
+</dd></dl>
+
   </section>
 
   
@@ -137,7 +143,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-conjunto_alimentos-label-Atributos+de+los+platos">Atributos de los platos<span><a href="#attribute-i-conjunto_alimentos-label-Atributos+de+los+platos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del plato, conjunto de alimentos y conjunto de cantidades</p>
         
         </div>
       </div>
@@ -150,7 +158,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-conjunto_cantidades-label-Atributos+de+los+platos">Atributos de los platos<span><a href="#attribute-i-conjunto_cantidades-label-Atributos+de+los+platos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del plato, conjunto de alimentos y conjunto de cantidades</p>
         
         </div>
       </div>
@@ -163,7 +173,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-nombre-label-Atributos+de+los+platos">Atributos de los platos<span><a href="#attribute-i-nombre-label-Atributos+de+los+platos">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Nombre del plato, conjunto de alimentos y conjunto de cantidades</p>
         
         </div>
       </div>
@@ -191,13 +203,16 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-c-new-label-Inicializar+-28initialize-29">Inicializar (initialize)<span><a href="#method-c-new-label-Inicializar+-28initialize-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-constant">Inicializa</span> <span class="ruby-identifier">el</span> <span class="ruby-identifier">plato</span> <span class="ruby-identifier">con</span> <span class="ruby-identifier">los</span> <span class="ruby-identifier">argumentos</span> <span class="ruby-identifier">necesarios</span>
+</pre>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 7</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">nombre</span>, <span class="ruby-identifier">conjunto_alimento</span>, <span class="ruby-identifier">conjunto_cantidad</span>)
         <span class="ruby-ivar">@nombre</span> = <span class="ruby-identifier">nombre</span>
         <span class="ruby-ivar">@conjunto_alimentos</span> = <span class="ruby-identifier">conjunto_alimento</span>
@@ -234,13 +249,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-3C-3D-3E-label-Comparable">Comparable<span><a href="#method-i-3C-3D-3E-label-Comparable">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite que los alimentos se comparen por el valor calórico total</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 44</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span> (<span class="ruby-identifier">otro_plato</span>)
         <span class="ruby-identifier">vct</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">otro_plato</span>.<span class="ruby-identifier">vct</span>
 <span class="ruby-keyword">end</span></pre>
@@ -267,13 +284,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-huella_nutricional-label-Obtenci-C3-B3n+de+huella+nutricional+-28huella_nutricional-29">Obtención de huella nutricional (huella_nutricional)<span><a href="#method-i-huella_nutricional-label-Obtenci-C3-B3n+de+huella+nutricional+-28huella_nutricional-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el valor de la huella nutricional</p>
           
           
 
           
           <div class="method-source-code" id="huella_nutricional-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 13</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">huella_nutricional</span> 
         
         <span class="ruby-identifier">indices_energ</span> = <span class="ruby-identifier">conjunto_alimentos</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">conjunto_cantidades</span>).<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">alimento</span> , <span class="ruby-identifier">cantidad</span><span class="ruby-operator">|</span> 
@@ -327,13 +346,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-por_h_carb-label-Porcentaje+de+hidratos+de+carbono+-28por_h_carb-29">Porcentaje de hidratos de carbono (por_h_carb)<span><a href="#method-i-por_h_carb-label-Porcentaje+de+hidratos+de+carbono+-28por_h_carb-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el valor del porcentaje de hidratos de carbno</p>
           
           
 
           
           <div class="method-source-code" id="por_h_carb-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 84</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 100</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">por_h_carb</span>
         <span class="ruby-identifier">i_alim</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">i_cant</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>
@@ -374,13 +395,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-por_lipid-label-Procentaje+de+l-C3-ADpidos+-28por_lipid-29">Procentaje de lípidos (por_lipid)<span><a href="#method-i-por_lipid-label-Procentaje+de+l-C3-ADpidos+-28por_lipid-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el valor del porcentaje de los lípidos</p>
           
           
 
           
           <div class="method-source-code" id="por_lipid-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 66</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">por_lipid</span>
         <span class="ruby-identifier">i_alim</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">i_cant</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>
@@ -421,13 +444,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-por_prot-label-Porcentaje+prote-C3-ADnas+-28por_prot-29">Porcentaje proteínas (por_prot)<span><a href="#method-i-por_prot-label-Porcentaje+prote-C3-ADnas+-28por_prot-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el porcentaje de proteínas</p>
           
           
 
           
           <div class="method-source-code" id="por_prot-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 48</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 60</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">por_prot</span>
         <span class="ruby-identifier">i_alim</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">i_cant</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>
@@ -468,13 +493,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-Formateo+-28to_s-29">Formateo (to_s)<span><a href="#method-i-to_s-label-Formateo+-28to_s-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el plato formateado</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 115</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 135</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
         <span class="ruby-identifier">cadena</span> = <span class="ruby-node">&quot;#{@nombre} &quot;</span>
         <span class="ruby-identifier">aux_alim</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
@@ -511,13 +538,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-vct-label-Valor+cal-C3-B3rico+total+-28vct-29">Valor calórico total (vct)<span><a href="#method-i-vct-label-Valor+cal-C3-B3rico+total+-28vct-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el valor calórico total</p>
           
           
 
           
           <div class="method-source-code" id="vct-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 102</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 120</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">vct</span>
         <span class="ruby-identifier">i_val</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">i_cantidad</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>

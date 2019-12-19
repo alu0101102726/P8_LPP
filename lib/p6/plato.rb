@@ -1,15 +1,23 @@
-
+# = Clase Plato donde se define cada plato, sus alimentos y cantidades
+# Autor:: Carlos Díaz Calzadilla
 class Plato 
 
 	include Comparable
-
+	
+	# == Atributos de los platos
+	# Nombre del plato, conjunto de alimentos y conjunto de cantidades
 	attr_reader :nombre, :conjunto_alimentos, :conjunto_cantidades
+
+	# === Inicializar (initialize)
+	#  Inicializa el plato con los argumentos necesarios
 	def initialize (nombre, conjunto_alimento, conjunto_cantidad)
 		@nombre = nombre
 		@conjunto_alimentos = conjunto_alimento
 		@conjunto_cantidades = conjunto_cantidad
 	end
 
+	# === Obtención de huella nutricional (huella_nutricional)
+	# Devuelve el valor de la huella nutricional
 	def huella_nutricional 
 		
 		indices_energ = conjunto_alimentos.zip(conjunto_cantidades).collect do |alimento , cantidad| 
@@ -41,10 +49,14 @@ class Plato
 		return (( sum_indices1 + sum_indices2 ) / (conjunto_alimentos.count * 2)).round(2)
 	end
 
+	# === Comparable
+	# Permite que los alimentos se comparen por el valor calórico total
 	def <=> (otro_plato)
 		vct <=> otro_plato.vct
 	end
 
+	# === Porcentaje proteínas (por_prot)
+	# Devuelve el porcentaje de proteínas
 	def por_prot
 		i_alim = @conjunto_alimentos.head
 		i_cant = @conjunto_cantidades.head
@@ -63,6 +75,8 @@ class Plato
 		 return "#{@proteinas.round(2)}%"
 	end
 
+	# === Procentaje de lípidos (por_lipid)
+	# Devuelve el valor del porcentaje de los lípidos
 	def por_lipid
 		i_alim = @conjunto_alimentos.head
 		i_cant = @conjunto_cantidades.head
@@ -80,7 +94,9 @@ class Plato
 		 @lipid = (lipid_total / cant_total)*100
 		 return "#{@lipid.round(2)}%"
 	end
-
+	
+	# === Porcentaje de hidratos de carbono (por_h_carb)
+	# Devuelve el valor del porcentaje de hidratos de carbno
 	def por_h_carb
 		i_alim = @conjunto_alimentos.head
 		i_cant = @conjunto_cantidades.head
@@ -99,6 +115,8 @@ class Plato
 		 return "#{@h_carb.round(2)}%"
 	end
 	
+	# === Valor calórico total (vct)
+	# Devuelve el valor calórico total
 	def vct
 		i_val = @conjunto_alimentos.head
 		i_cantidad = @conjunto_cantidades.head
@@ -112,6 +130,8 @@ class Plato
 		return vct_total.round(2)
 	end
 
+	# === Formateo (to_s)
+	# Devuelve el plato formateado
 	def to_s
 		cadena = "#{@nombre} "
 		aux_alim = @conjunto_alimentos.head
@@ -127,11 +147,17 @@ class Plato
 	end
 end
 
+# = Clase Plato_heredada, esta hereda de la cclase Plato
 class Plato_heredada < Plato
+
+	# === Inicializar (initialize)
+	# Inicializa con el initialize de la clase padre
 	def initialize (nombre, conj_alimen , conj_canti)
 		super(nombre, conj_alimen , conj_canti)
 	end
 
+	# === Formateo (to_s)
+	# Devuelve el plato formateado
 	def to_s
 		cadena = "#{@nombre} "
 		aux_alim = @conjunto_alimentos.head
@@ -143,6 +169,8 @@ class Plato_heredada < Plato
 		return cadena
 	end
 
+	# === Comparable
+	# Permite comparar respecto a la huella nutricional
 	def <=> (otro_plato)
 		huella_nutricional <=> otro_plato.huella_nutricional
 	end
@@ -160,6 +188,8 @@ class Plato_heredada < Plato
 		return t_gei.round(2)
 	end
 
+	# === Cantidad de terreno (t_terreno)
+	# Devuelve la cantidad de terreno del plato
 	def t_terreno
 		aux = @conjunto_alimentos.head
 		aux_t = @conjunto_cantidades.head

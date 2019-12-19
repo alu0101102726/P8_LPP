@@ -95,6 +95,8 @@
 
   <section class="description">
     
+<h1 id="class-Plato_heredada-label-Clase+Plato_heredada-2C+esta+hereda+de+la+cclase+Plato">Clase <a href="Plato_heredada.html"><code>Plato_heredada</code></a>, esta hereda de la cclase <a href="Plato.html"><code>Plato</code></a><span><a href="#class-Plato_heredada-label-Clase+Plato_heredada-2C+esta+hereda+de+la+cclase+Plato">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
   </section>
 
   
@@ -127,7 +129,9 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-c-new-label-Inicializar+-28initialize-29">Inicializar (initialize)<span><a href="#method-c-new-label-Inicializar+-28initialize-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Inicializa con el initialize de la clase padre</p>
           
           
             <div class="method-calls-super">
@@ -138,7 +142,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 131</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 155</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">nombre</span>, <span class="ruby-identifier">conj_alimen</span> , <span class="ruby-identifier">conj_canti</span>)
         <span class="ruby-keyword">super</span>(<span class="ruby-identifier">nombre</span>, <span class="ruby-identifier">conj_alimen</span> , <span class="ruby-identifier">conj_canti</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -173,13 +177,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-3C-3D-3E-label-Comparable">Comparable<span><a href="#method-i-3C-3D-3E-label-Comparable">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Permite comparar respecto a la huella nutricional</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 146</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 174</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span> (<span class="ruby-identifier">otro_plato</span>)
         <span class="ruby-identifier">huella_nutricional</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">otro_plato</span>.<span class="ruby-identifier">huella_nutricional</span>
 <span class="ruby-keyword">end</span></pre>
@@ -212,7 +218,7 @@
 
           
           <div class="method-source-code" id="t_gei-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 150</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 178</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">t_gei</span>
         <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">aux_t</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>
@@ -248,13 +254,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-t_terreno-label-Cantidad+de+terreno+-28t_terreno-29">Cantidad de terreno (t_terreno)<span><a href="#method-i-t_terreno-label-Cantidad+de+terreno+-28t_terreno-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve la cantidad de terreno del plato</p>
           
           
 
           
           <div class="method-source-code" id="t_terreno-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 163</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 193</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">t_terreno</span>
         <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>
         <span class="ruby-identifier">aux_t</span> = <span class="ruby-ivar">@conjunto_cantidades</span>.<span class="ruby-identifier">head</span>
@@ -290,13 +298,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-Formateo+-28to_s-29">Formateo (to_s)<span><a href="#method-i-to_s-label-Formateo+-28to_s-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el plato formateado</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 135</span>
+            <pre><span class="ruby-comment"># File lib/p6/plato.rb, line 161</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
         <span class="ruby-identifier">cadena</span> = <span class="ruby-node">&quot;#{@nombre} &quot;</span>
         <span class="ruby-identifier">aux_alim</span> = <span class="ruby-ivar">@conjunto_alimentos</span>.<span class="ruby-identifier">head</span>

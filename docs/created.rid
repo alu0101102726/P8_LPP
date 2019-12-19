@@ -1,10 +1,10 @@
-Sun, 15 Dec 2019 21:05:54 +0000
+Thu, 19 Dec 2019 11:41:36 +0000
 ./lib/p6.rb	Sun, 15 Dec 2019 19:56:26 +0000
 ./lib/p6/funciones.rb	Sun, 15 Dec 2019 20:02:09 +0000
 ./lib/p6/lista.rb	Sun, 15 Dec 2019 21:05:11 +0000
-./lib/p6/alimento.rb	Sun, 15 Dec 2019 20:25:02 +0000
+./lib/p6/alimento.rb	Thu, 19 Dec 2019 11:41:28 +0000
 ./lib/p6/version.rb	Sun, 15 Dec 2019 19:56:02 +0000
-./lib/p6/plato.rb	Sun, 15 Dec 2019 19:52:00 +0000
+./lib/p6/plato.rb	Thu, 19 Dec 2019 11:41:27 +0000
 ./p6.gemspec	Tue, 26 Nov 2019 14:37:50 +0000
 ./LICENSE.txt	Tue, 26 Nov 2019 14:37:50 +0000
 ./Gemfile	Tue, 26 Nov 2019 14:37:50 +0000
